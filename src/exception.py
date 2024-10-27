@@ -1,7 +1,7 @@
 #The code is a custom exception handling, designed to provide detailed error information
 
 import sys
-from logger import logging
+from src.logger import logging
 
 # Function to capture detailed error information, such as file name, line number, and error message
 def get_error_details(error, error_detail: sys):
@@ -40,10 +40,10 @@ def divide_numbers(a, b):
     except ZeroDivisionError as e:
         raise CustomException("Division by zero error", sys)
 
-if __name__ =="__main__":
+# if __name__ =="__main__":
     
-    # Test the function to trigger the exception
-    try:
-        result = divide_numbers(10, 0)
-    except CustomException as ce:
-        logging.info(f"An error occurred: {ce}")
+#     # Test the function to trigger the exception
+#     try:
+#         result = divide_numbers(10, 0)
+#     except CustomException as ce:
+#         logging.info(f"An error occurred: {ce}")
